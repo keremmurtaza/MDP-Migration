@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Migration: Source System Data</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>SAPLZMIG_SOURCE</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZMIG_GET_DATA</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Migration: Get Source System Data</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>SOURCE_CLASS</PARAMETER>
+       <TYP>SEOCLSNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SELECTIONS</PARAMETER>
+       <TYP>RSPARAMS_TT</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>VALUES</PARAMETER>
+       <DBSTRUCT>ZMIG_DATA_VALUE</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>MESSAGES</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SOURCE_CLASS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Source System Class</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SELECTIONS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Selection Screen Values</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VALUES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Source Data Values</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>MESSAGES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Messages</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
